@@ -1,9 +1,10 @@
 import pandas as pd
 import re
+import os
 
 # Caminho do arquivo de entrada e de saída
-arquivo_entrada = r"C:\Francisco\Encontrar Emprego\Desafio Tecnico\beanalytics\dados\brutos\dados_brutos_100.json"
-arquivo_saida = r"C:\Francisco\Encontrar Emprego\Desafio Tecnico\beanalytics\dados\refinados\dados_estruturados_final.csv"
+arquivo_entrada = os.path.join("dados", "brutos", "dados_brutos_100.json")
+arquivo_saida = os.path.join("dados", "refinados", "dados_estruturados_final.csv")
 
 # Carregar o arquivo estruturado
 data = pd.read_json(arquivo_entrada)
